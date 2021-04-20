@@ -8,6 +8,9 @@ console.log(hasSpace('Rayhane Emna Bousnina'));
 function countVowels(str) {
     const patt = /[aeiouy]/ig
     let tab = str.match(patt)
+    if (tab==null)
+    return 0
+    else
     return tab.length
 }
 console.log(countVowels('Celebration'));
@@ -23,7 +26,7 @@ function mathExpr(str) {
     const patt = /[0-9\s?][+*-/%][0-9\s?]/
     return patt.test(str)
 }
-console.log(mathExpr("4+10"))
+console.log(mathExpr("4 + 11"))
 
 function asterisk(str) {
     const patt = /[a-z]{0,}[a][a-z]{0,}[c]{0,}[a-z]{0,}/i;
